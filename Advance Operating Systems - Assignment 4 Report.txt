@@ -1,0 +1,6 @@
+Contribution :
+Janak Bhalla
+- Created the system calls future_get, future_free and future consumer, producer files.
+
+Karan Lamba
+- Created the system calls future_set, future_alloc and future header file as well as changes in xsh_prodcons.c.

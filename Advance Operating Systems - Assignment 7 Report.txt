@@ -1,0 +1,10 @@
+Advance Operating System Assignment 7
+
+17.2
+In order to achieve a communication between the linux cm and beaglebone using udp, 2 entries are made in udpentry table i.e. one for the client and one for the server. When the beaglebone receives, it uses the server slot containing the local port and for transmitting it uses the client slot containing the remote ip and port along with the local port.
+
+17.3
+In order to remove stale entries from the arpcache table, a new field is added in the arpentry know as currtime which records the current time at which the arp is resolved. On further arp reqquests, all entries in arpcache are iterated and all entries having time more than five minutes old states are changed to free.
+
+Udp with futures.
+In order to achieve this, two prcoess network_prod and network_cons are produced. These processes establish a communication with the vm server and receive a message from it. Thereafter, the ascii value of the message is stored in the future which is retrieved using the future_get and future_set paradigm.

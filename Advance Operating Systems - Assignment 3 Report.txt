@@ -1,0 +1,9 @@
+1. How exactly is sychronization achieved using semaphore in our assignment?
+The wait and signal system calls helps us to achieve the synchronization using semaphore in our assignment.
+The wait call decrements the semaphore count and checks whether its non negative. If the condition is true then it changes the state of the current process to waiting and enqueues it in the waiting processes list of the semaphore. As seen in our example, the semaphore produced has a count 1, hence the producer process will not be halted the first time it enters. On the other hand, the semaphore consumed has a count 0, which we put the consumer process on wait.
+The signal call increments the semaphore count and checks whether its non negative. If the condition is true then it dequeues the first process on the semaphore and makes it in ready state. As seen in the example, the producer process after producing the value will call the signal function on the consumed semaphore, thus changing the waiting state of the consumer process.
+This cycle continues and thus synchronization is achieved between the producer and consumer.
+
+
+2. Can the above sychronization be achieved with just one semphore? Why or why not?
+The above synchronization cannot be achieved with just one semaphore as there exits 2 critical conditions and require 2 semaphores for achieving this.

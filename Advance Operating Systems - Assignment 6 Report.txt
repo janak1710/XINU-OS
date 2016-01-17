@@ -1,0 +1,18 @@
+9.1
+Free Memory List is traversed and printed using the new system call printfreemem and new shell command xsh_printfreemem
+
+9.4
+1. Inorder that stack is not freed back to the free list, we have put a condition on the freestk system call in the kill method.
+2. The condition is based on a flag which is set in the xsh_maxstksize.
+
+9.7
+Maximum Stack Size
+1. In the create system call, the entire alloted stack is filled with dummy values -1.
+2. When the stack is used, the dummy values are over written.
+3. When the process is killed, we count the number of dummy values. This number is the least available space in the stack at any instance.
+4. The maximum stack size can be calculated as stack length subtrcted by the number of dummy values.
+5. New system call - xsh_maxstksize and dummy function testproc are used to display the result.
+
+Contribution
+Janak Bhalla - 9.7
+Karan Lamba - 9.1 & 9.4

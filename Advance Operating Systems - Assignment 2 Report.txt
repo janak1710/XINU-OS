@@ -1,0 +1,12 @@
+1. Does your program output any garbage? If yes, why?
+Yes. In this assignment, both the producer and consumer processes are trying to access the print functionality simultaneously without any synchronisation mechanism between them leading to the garbage value in the program output.
+
+2.Are all the produced values getting consumed? Check your program for a small count like 20.
+No. All the produced values aren't getting consumed since the program fails to demonstrate an ideal producer - consumer buffer in which the consumer consumes all the produced values and waits for the producer to generate more values.
+
+Contribution :
+Janak Bhalla
+- Made the produce.c and consume.c files and appropriate changes in the MakeFile to include the path of the apps folder
+
+Karan Lamba
+- Created the new shell command prodcons with the xsh_prodcons.c file as well as performed passed count argument validations.
